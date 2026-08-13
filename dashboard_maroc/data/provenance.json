@@ -1,0 +1,28 @@
+{
+  "indicator": "SDG 15.3.1 / UNCCD SO2 / UNCCD SO3",
+  "methodology": "Trends.Earth v2.2.6; UNCCD GPG 15.3.1 v2 (2021); GPG Addendum (2025); GPG-SO3 (2021)",
+  "producer": "HCP - Haut-Commissariat au Plan",
+  "gsbpm_phase": "5.4 Impute/derive new variables; 5.6 Calculate aggregates",
+  "spatial_reference": "EPSG:4326",
+  "extent": "Morocco - 12 regions ",
+  "periods": {
+    "baseline": [
+      2001,
+      2015
+    ],
+    "reporting": [
+      2016,
+      2025
+    ]
+  },
+  "substitutions": {
+    "land_cover": "MODIS MCD12Q1 (IGBP) instead of ESA CCI - not available in GEE",
+    "soil_organic_carbon": "OpenLandMap instead of SoilGrids - not available in GEE",
+    "soil_units": "OpenLandMap USDA great groups instead of SoilGrids USDA units",
+    "precipitation_spi": "CHIRPS instead of GPCC - not available in GEE",
+    "spi_transform": "empirical (no incomplete gamma function in Earth Engine)",
+    "population": "WorldPop 2020 age/sex - later years unavailable",
+    "drought_vulnerability": "rebuilt composite - JRC DVI not available in GEE"
+  },
+  "generated": "2026-08-13T09:25:22+00:00"
+}
