@@ -1,0 +1,1 @@
+# Project notes`n`n- Main dashboard app entry: app.py`n- Application logic: src/app.py`n- Data assets: data/`n- Exploratory analysis: notebooks/`n- Configuration: config/

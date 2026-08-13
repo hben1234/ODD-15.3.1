@@ -3,7 +3,7 @@
     "ldn-alert": {
       "type": "raster",
       "tiles": [
-        "https://earthengine.googleapis.com/v1/projects/pfe3-505211/maps/1ccd5f0e9fab889b15db174c270e3be2-3295442093d0961bbec05c5451e4f159/tiles/{z}/{x}/{y}"
+        "https://earthengine.googleapis.com/v1/projects/pfe3-505211/maps/1ccd5f0e9fab889b15db174c270e3be2-ce9e71ad3132824599b695535dba01d7/tiles/{z}/{x}/{y}"
       ],
       "tileSize": 256,
       "attribution": "HCP / Google Earth Engine / MODIS / CHIRPS"
