@@ -2,41 +2,21 @@
 
 Dashboard interactif pour le suivi de la dégradation des terres au Maroc selon l'indicateur **ODD 15.3.1** (Neutralité en matière de dégradation des terres).
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
 
----
 
 ## Fonctionnalités
 
 ### **Cartographie Interactive**
-- Visualisation régionale de la dégradation des terres
-- Cartes live avec tuiles Google Earth Engine (NRT)
-- Couches SDG 15.3.1 officielles et alertes quasi temps réel
 
 ### **Analyses Multi-Indicateurs**
-- **SDG 15.3.1**: Productivité, Couverture des terres, Carbone organique du sol
-- **Sécheresse SO3-1**: Indice de précipitations standardisé (SPI-12)
-- **Vulnérabilité DVI**: Comparaison régionale (pays voisins)
 
 ### **Recommandations Stratégiques**
-- Priorisation territoriale dynamique
-- Plans d'action régionalisés
-- Mesures d'adaptation au changement climatique
-- Budget estimatif et parties prenantes
 
 ### **Interface Professionnelle**
-- Branding HCP (Haut-Commissariat au Plan)
-- Design responsive et accessible
-- Export CSV de toutes les analyses
-- Navigation par onglets intuitive
 
----
 
 ## Démo Live
 
-**URL de production**: [https://votre-app.streamlit.app](https://votre-app.streamlit.app) *(à configurer)*
-
----
 
 ## Installation Locale
 
