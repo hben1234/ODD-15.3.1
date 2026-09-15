@@ -1,4 +1,4 @@
-# 🌍 Dashboard Dégradation des Terres - Maroc
+# Dashboard Dégradation des Terres - Maroc
 
 Dashboard interactif pour le suivi de la dégradation des terres au Maroc selon l'indicateur **ODD 15.3.1** (Neutralité en matière de dégradation des terres).
 
@@ -6,25 +6,25 @@ Dashboard interactif pour le suivi de la dégradation des terres au Maroc selon 
 
 ---
 
-## 📊 Fonctionnalités
+## Fonctionnalités
 
-### 🗺️ **Cartographie Interactive**
+### **Cartographie Interactive**
 - Visualisation régionale de la dégradation des terres
 - Cartes live avec tuiles Google Earth Engine (NRT)
 - Couches SDG 15.3.1 officielles et alertes quasi temps réel
 
-### 📈 **Analyses Multi-Indicateurs**
+### **Analyses Multi-Indicateurs**
 - **SDG 15.3.1**: Productivité, Couverture des terres, Carbone organique du sol
 - **Sécheresse SO3-1**: Indice de précipitations standardisé (SPI-12)
 - **Vulnérabilité DVI**: Comparaison régionale (pays voisins)
 
-### 💡 **Recommandations Stratégiques**
+### **Recommandations Stratégiques**
 - Priorisation territoriale dynamique
 - Plans d'action régionalisés
 - Mesures d'adaptation au changement climatique
 - Budget estimatif et parties prenantes
 
-### 🎨 **Interface Professionnelle**
+### **Interface Professionnelle**
 - Branding HCP (Haut-Commissariat au Plan)
 - Design responsive et accessible
 - Export CSV de toutes les analyses
@@ -32,13 +32,13 @@ Dashboard interactif pour le suivi de la dégradation des terres au Maroc selon 
 
 ---
 
-## 🚀 Démo Live
+## Démo Live
 
 **URL de production**: [https://votre-app.streamlit.app](https://votre-app.streamlit.app) *(à configurer)*
 
 ---
 
-## 🛠️ Installation Locale
+## Installation Locale
 
 ### Prérequis
 - Python 3.9+
@@ -66,7 +66,7 @@ L'application sera accessible sur `http://localhost:8501`
 
 ---
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 dashboard-maroc/
@@ -91,7 +91,7 @@ dashboard-maroc/
 
 ---
 
-## 📖 Méthodologie
+## Méthodologie
 
 ### Données Sources
 - **SDG 15.3.1**: Trends.Earth v2.2.6, UNCCD GPG v2 (2021) + Addendum 2025
@@ -112,7 +112,7 @@ dashboard-maroc/
 
 ---
 
-## 🔧 Configuration Avancée
+## Configuration Avancée
 
 ### Authentification Google Earth Engine
 
@@ -146,7 +146,7 @@ Les fichiers JSON générés (`maplibre_*_sources.json`) doivent être committé
 
 ---
 
-## 🌐 Déploiement sur Streamlit Community Cloud
+## Déploiement sur Streamlit Community Cloud
 
 Suivez le guide détaillé: [DEPLOIEMENT_STREAMLIT_CLOUD.md](DEPLOIEMENT_STREAMLIT_CLOUD.md)
 
@@ -156,11 +156,11 @@ Suivez le guide détaillé: [DEPLOIEMENT_STREAMLIT_CLOUD.md](DEPLOIEMENT_STREAML
 2. Connectez-vous sur https://share.streamlit.io/
 3. Sélectionnez votre repository
 4. Configurez les secrets GEE
-5. Déployez! 🚀
+5. Déployez!
 
 ---
 
-## 📊 Captures d'Écran
+## Captures d'Écran
 
 ### Synthèse Exécutive
 ![Synthèse](https://via.placeholder.com/800x400?text=Synthese+Executive)
@@ -173,7 +173,7 @@ Suivez le guide détaillé: [DEPLOIEMENT_STREAMLIT_CLOUD.md](DEPLOIEMENT_STREAML
 
 ---
 
-## 🤝 Contribution
+## Contribution
 
 Les contributions sont les bienvenues! 
 
@@ -185,7 +185,7 @@ Les contributions sont les bienvenues!
 
 ---
 
-## 📝 TODO / Roadmap
+## TODO / Roadmap
 
 - [ ] **Automatisation**: Pipeline GitHub Actions pour rafraîchir les tuiles quotidiennement
 - [ ] **Export PDF**: Générer un rapport PDF des recommandations
@@ -197,7 +197,7 @@ Les contributions sont les bienvenues!
 
 ---
 
-## 📄 Licence
+## Licence
 
 © 2024 Haut-Commissariat au Plan (HCP) - Royaume du Maroc
 
@@ -205,7 +205,7 @@ Ce projet est développé dans le cadre du suivi des Objectifs de Développement
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Haut-Commissariat au Plan (HCP)**
 - Site web: https://www.hcp.ma
@@ -216,7 +216,7 @@ Ce projet est développé dans le cadre du suivi des Objectifs de Développement
 
 ---
 
-## 🙏 Remerciements
+## Remerciements
 
 - **UNCCD**: Convention des Nations Unies sur la lutte contre la désertification
 - **Trends.Earth**: Conservation International
@@ -226,7 +226,7 @@ Ce projet est développé dans le cadre du suivi des Objectifs de Développement
 
 ---
 
-## 📚 Références
+## Références
 
 1. UNCCD (2021). *Good Practice Guidance for SDG Indicator 15.3.1 (version 2)*
 2. UNCCD (2021). *Good Practice Guidance for Strategic Objective 3*
@@ -236,4 +236,4 @@ Ce projet est développé dans le cadre du suivi des Objectifs de Développement
 
 ---
 
-**Construit avec ❤️ pour le développement durable du Maroc**
+**Construit pour le développement durable du Maroc**
