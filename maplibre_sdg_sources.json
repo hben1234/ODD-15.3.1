@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "generated_at": "2026-08-25T11:30:00+00:00",
+    "layer": "SDG 15.3.1 Status (Official 3-class)",
+    "source": "Google Earth Engine / Trends.Earth / UNCCD",
+    "asset_path": "projects/degradation2/assets/ldn/sdg1531_status_2016_2023",
+    "note": "Token régénéré le 25 août 2026 - projet degradation2"
+  },
+  "sources": {
+    "sdg-status": {
+      "type": "raster",
+      "tiles": [
+        "https://earthengine.googleapis.com/v1/projects/degradation2/maps/dee6714eef56db085043ff191ae56cb3-668e1c32f9c98db563fe7a3b69a00288/tiles/{z}/{x}/{y}"
+      ],
+      "tileSize": 256,
+      "attribution": "HCP / Google Earth Engine / Trends.Earth / UNCCD"
+    }
+  },
+  "layers": [
+    {
+      "id": "sdg-status",
+      "type": "raster",
+      "source": "sdg-status",
+      "paint": {
+        "raster-opacity": 0.9
+      }
+    }
+  ]
+}

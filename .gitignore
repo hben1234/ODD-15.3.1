@@ -1,0 +1,31 @@
+# Secrets et fichiers sensibles
+.env
+secrets/
+*.private-key.json
+gee_refresh.log
+
+# Cache et fichiers Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.uv-cache/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak

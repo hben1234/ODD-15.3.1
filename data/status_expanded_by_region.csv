@@ -1,0 +1,77 @@
+region,class_code,class,area_ha,pct,indicator
+Beni Mellal-Khenifra,1,Persistent degradation,520446.83261540235,18.013067601999733,Status expanded
+Beni Mellal-Khenifra,2,Recent degradation,1673141.171598981,57.90871063667907,Status expanded
+Beni Mellal-Khenifra,3,Baseline degradation,40879.28592890319,1.4148637186595443,Status expanded
+Beni Mellal-Khenifra,4,Stability,600735.500534278,20.791920526571097,Status expanded
+Beni Mellal-Khenifra,5,Baseline improvement,24705.20170396446,0.8550661480217081,Status expanded
+Beni Mellal-Khenifra,6,Recent improvement,29344.870387671577,1.0156486713709416,Status expanded
+Beni Mellal-Khenifra,7,Persistent improvement,20.8806859375,0.0007226966979089296,Status expanded
+Casablanca-Settat,1,Persistent degradation,387318.4284114331,19.466191469548384,Status expanded
+Casablanca-Settat,2,Recent degradation,1376134.9428351494,69.1630047014161,Status expanded
+Casablanca-Settat,3,Baseline degradation,19561.815680674026,0.9831550001217914,Status expanded
+Casablanca-Settat,4,Stability,200553.4201324197,10.079590821904771,Status expanded
+Casablanca-Settat,5,Baseline improvement,250.116990625,0.012570600498568394,Status expanded
+Casablanca-Settat,6,Recent improvement,5879.30710966299,0.29548740651039607,Status expanded
+Dakhla-Oued Eddahab,1,Persistent degradation,723283.715831631,5.6893859043337,Status expanded
+Dakhla-Oued Eddahab,2,Recent degradation,2040974.9023516919,16.054410719294598,Status expanded
+Dakhla-Oued Eddahab,3,Baseline degradation,1597062.0881732753,12.562570308044824,Status expanded
+Dakhla-Oued Eddahab,4,Stability,8351357.389710439,65.69219515807845,Status expanded
+Dakhla-Oued Eddahab,6,Recent improvement,182.7995296875,0.001437910248438376,Status expanded
+Daraa-Tafilelt,1,Persistent degradation,103432.55768579606,1.2754493492330181,Status expanded
+Daraa-Tafilelt,2,Recent degradation,1127008.9062780377,13.897391771542129,Status expanded
+Daraa-Tafilelt,3,Baseline degradation,94602.6760056189,1.1665661591160528,Status expanded
+Daraa-Tafilelt,4,Stability,6218681.984542303,76.68391914242288,Status expanded
+Daraa-Tafilelt,5,Baseline improvement,527762.8787634071,6.507958763941216,Status expanded
+Daraa-Tafilelt,6,Recent improvement,38010.42514153185,0.4687148137447127,Status expanded
+Fes-Meknes,1,Persistent degradation,600156.7334147318,15.63419861424364,Status expanded
+Fes-Meknes,2,Recent degradation,1944021.9112863485,50.64214559180726,Status expanded
+Fes-Meknes,3,Baseline degradation,159193.16011625627,4.147012513090879,Status expanded
+Fes-Meknes,4,Stability,1036199.355582025,26.99319298968144,Status expanded
+Fes-Meknes,5,Baseline improvement,38471.57926922794,1.002192057192312,Status expanded
+Fes-Meknes,6,Recent improvement,60618.00204258577,1.5791106402158872,Status expanded
+Fes-Meknes,7,Persistent improvement,82.440609375,0.002147593768572035,Status expanded
+Guelmim-Oued Noun,1,Persistent degradation,208818.8078527758,4.22965955666155,Status expanded
+Guelmim-Oued Noun,2,Recent degradation,2930965.8316954114,59.36719861469208,Status expanded
+Guelmim-Oued Noun,3,Baseline degradation,238244.81364258548,4.825688180151232,Status expanded
+Guelmim-Oued Noun,4,Stability,1551870.0966701023,31.433385970222265,Status expanded
+Guelmim-Oued Noun,5,Baseline improvement,6391.227389430148,0.12945536987051107,Status expanded
+Guelmim-Oued Noun,6,Recent improvement,721.411446875,0.014612308402369411,Status expanded
+Laayoune-Saguia Hamra,1,Persistent degradation,307704.87319376826,2.244650931665778,Status expanded
+Laayoune-Saguia Hamra,2,Recent degradation,3346649.6622440536,24.413198934241684,Status expanded
+Laayoune-Saguia Hamra,3,Baseline degradation,973140.0775802212,7.098879387607923,Status expanded
+Laayoune-Saguia Hamra,4,Stability,9017554.688093996,65.78141685533508,Status expanded
+Laayoune-Saguia Hamra,5,Baseline improvement,51731.34360388477,0.3773707169845827,Status expanded
+Laayoune-Saguia Hamra,6,Recent improvement,11581.259262500002,0.08448317416495185,Status expanded
+Marrakech-Safi,1,Persistent degradation,986447.3958876147,24.699945515431093,Status expanded
+Marrakech-Safi,2,Recent degradation,2475829.424218931,61.993018724209634,Status expanded
+Marrakech-Safi,3,Baseline degradation,56216.516322297735,1.407621831652433,Status expanded
+Marrakech-Safi,4,Stability,404153.750052144,10.119724222255863,Status expanded
+Marrakech-Safi,5,Baseline improvement,24960.317068394605,0.6249886960089568,Status expanded
+Marrakech-Safi,6,Recent improvement,46009.57686064333,1.152047282382813,Status expanded
+Marrakech-Safi,7,Persistent improvement,105.982546875,0.0026537280592074893,Status expanded
+Oriental,1,Persistent degradation,886759.4792315906,13.311767345321783,Status expanded
+Oriental,2,Recent degradation,3805014.3582122335,57.11973434557641,Status expanded
+Oriental,3,Baseline degradation,99211.1978424878,1.4893287465889875,Status expanded
+Oriental,4,Stability,1776871.3918035345,26.67386041448714,Status expanded
+Oriental,5,Baseline improvement,87177.33327993257,1.3086799809725658,Status expanded
+Oriental,6,Recent improvement,6436.923635441176,0.09662916705310733,Status expanded
+Rabat-Sale-Kenitra,1,Persistent degradation,254540.35058366504,15.317632834132406,Status expanded
+Rabat-Sale-Kenitra,2,Recent degradation,896400.737596218,53.94326415933481,Status expanded
+Rabat-Sale-Kenitra,3,Baseline degradation,78040.80787325976,4.696310185558362,Status expanded
+Rabat-Sale-Kenitra,4,Stability,408934.7412670826,24.60872001428007,Status expanded
+Rabat-Sale-Kenitra,5,Baseline improvement,6858.171577591913,0.41270845230688186,Status expanded
+Rabat-Sale-Kenitra,6,Recent improvement,16951.81321498161,1.020119796741356,Status expanded
+Rabat-Sale-Kenitra,7,Persistent improvement,20.681403125,0.0012445576461139608,Status expanded
+Souss Massa,1,Persistent degradation,234860.32463363867,4.505308765055088,Status expanded
+Souss Massa,2,Recent degradation,3189758.4299705564,61.18890721696801,Status expanded
+Souss Massa,3,Baseline degradation,100979.43404918525,1.9370812418903371,Status expanded
+Souss Massa,4,Stability,1642059.1174815947,31.499502294687918,Status expanded
+Souss Massa,5,Baseline improvement,35974.027315992644,0.6900871862196992,Status expanded
+Souss Massa,6,Recent improvement,9337.119572849264,0.1791132951789341,Status expanded
+Tanger-Tetouan-Hoceima,1,Persistent degradation,158716.94886238372,10.468257125084513,Status expanded
+Tanger-Tetouan-Hoceima,2,Recent degradation,339628.19956973963,22.40035072188922,Status expanded
+Tanger-Tetouan-Hoceima,3,Baseline degradation,183342.65460210873,12.09245807789912,Status expanded
+Tanger-Tetouan-Hoceima,4,Stability,760581.2607839898,50.164524075568124,Status expanded
+Tanger-Tetouan-Hoceima,5,Baseline improvement,36428.54400487132,2.402663156447737,Status expanded
+Tanger-Tetouan-Hoceima,6,Recent improvement,37252.290999515884,2.456993808641862,Status expanded
+Tanger-Tetouan-Hoceima,7,Persistent improvement,223.68161093749998,0.01475303446941337,Status expanded
