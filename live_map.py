@@ -1,15 +1,3 @@
-"""
-live_map.py
------------
-Small self-contained raster tile viewer for Streamlit.
-
-The original version used MapLibre GL JS from a CDN. On locked-down localhost
-setups that CDN can be blocked, leaving an empty gray panel. This implementation
-does not depend on an external JavaScript library: it positions standard XYZ
-tiles directly in the browser and overlays the GEE NRT raster tiles from
-maplibre_ldn_sources.json.
-"""
-
 from __future__ import annotations
 
 import json

@@ -1,23 +1,10 @@
-"""
-live_map_sdg.py
---------------
-Carte SDG 15.3.1 — rendu optimisé :
-  • Cache LRU 1024 tuiles (OSM + GEE) — zéro re-requête pour les tuiles vues
-  • Affichage progressif — chaque tuile s'insère dès qu'elle est chargée
-  • renderToken — annule les callbacks des renders obsolètes
-  • Prefetch centre→bords — les tuiles centrales arrivent en premier
-  • Skeleton animé pendant le chargement initial
-  • Zoom correct — préserve la position géographique
-  • Debounce pan 60 ms
-"""
-
 from __future__ import annotations
 import json
 
 
 def build_sdg_maplibre_html(
     sources_config: dict,
-    geojson_data: dict = None,
+    geojson_data: dict | None = None,
     center_lon: float = -7.0,
     center_lat: float = 30.5,
     zoom: float = 6.0,
@@ -51,7 +38,6 @@ def build_sdg_maplibre_html(
     }}
     #map.dragging {{ cursor:grabbing; }}
 
-    /* Skeleton animé affiché tant que aucune tuile GEE n'est arrivée */
     #skeleton {{
         position:absolute; inset:0; z-index:20;
         background: linear-gradient(110deg,#1a1a2e 30%,#16213e 50%,#1a1a2e 70%);
@@ -189,9 +175,8 @@ def build_sdg_maplibre_html(
     let currentOpacity = {opacity};
     let renderToken    = 0;
     let panTimer       = null;
-    let skeletonGone   = false;   // ne cacher le skeleton qu'une seule fois
+    let skeletonGone   = false;
 
-    // ── Cache LRU ────────────────────────────────────────────────────────
     const CACHE_MAX = 1024;
     const tileCache = new Map();
 
@@ -208,7 +193,6 @@ def build_sdg_maplibre_html(
         tileCache.set(url, img);
     }}
 
-    // ── Projection ───────────────────────────────────────────────────────
     function lonLatToWorld(lon, lat, z) {{
         const scale = TILE_SIZE * Math.pow(2, z);
         const x = (lon + 180) / 360 * scale;
@@ -227,7 +211,6 @@ def build_sdg_maplibre_html(
         return tmpl.replace('{{z}}', z).replace('{{x}}', x).replace('{{y}}', y);
     }}
 
-    // ── UI helpers ───────────────────────────────────────────────────────
     function showWarning(msg) {{ warningEl.style.display='block'; warningEl.innerHTML=msg; }}
     function hideWarning()    {{ warningEl.style.display='none'; }}
     function updateZoom()     {{ zoomEl.textContent='Zoom: '+zoom; }}
@@ -238,7 +221,6 @@ def build_sdg_maplibre_html(
         setTimeout(() => skeletonEl.remove(), 450);
     }}
 
-    // ── Boundaries ──────────────────────────────────────────────────────
     function projectCoord(lon, lat) {{
         const w = lonLatToWorld(lon, lat, zoom);
         return {{ x: w.x - center.x + mapEl.clientWidth/2,
@@ -263,7 +245,6 @@ def build_sdg_maplibre_html(
         }});
     }}
 
-    // ── Tile loader avec cache ───────────────────────────────────────────
     function loadTile(url) {{
         const hit = cacheGet(url);
         if (hit) return Promise.resolve(hit);
@@ -275,7 +256,6 @@ def build_sdg_maplibre_html(
         }});
     }}
 
-    // ── Coords visibles triées centre → bords ────────────────────────────
     function visibleTileCoords(margin) {{
         const W = mapEl.clientWidth, H = mapEl.clientHeight;
         const scale = Math.pow(2, zoom);
@@ -291,7 +271,7 @@ def build_sdg_maplibre_html(
                 const wx   = ((x%scale)+scale)%scale;
                 const left = Math.round(x*TILE_SIZE - center.x + W/2);
                 const top  = Math.round(y*TILE_SIZE - center.y + H/2);
-                const dist = (x-cx)**2 + (y-cy)**2;   // priorité centre
+                const dist = (x-cx)**2 + (y-cy)**2;
                 coords.push({{x, y, wx, left, top, dist}});
             }}
         }}
@@ -299,7 +279,6 @@ def build_sdg_maplibre_html(
         return coords;
     }}
 
-    // ── Render ───────────────────────────────────────────────────────────
     function render() {{
         const myToken = ++renderToken;
         mapEl.querySelectorAll('.tile').forEach(t => t.remove());
@@ -311,7 +290,6 @@ def build_sdg_maplibre_html(
             return;
         }}
 
-        // Viewport (marge 1) pour l'affichage, marge 2 pour prefetch silencieux
         const coords        = visibleTileCoords(1);
         const prefetchCoords= visibleTileCoords(2);
 
@@ -319,7 +297,6 @@ def build_sdg_maplibre_html(
         const geeTotal = coords.length;
 
         coords.forEach(({{wx, y, left, top}}) => {{
-            // 1. Fond OSM
             const osmUrl = 'https://tile.openstreetmap.org/'+zoom+'/'+wx+'/'+y+'.png';
             loadTile(osmUrl).then(img => {{
                 if (myToken !== renderToken || !img) return;
@@ -329,7 +306,6 @@ def build_sdg_maplibre_html(
                 mapEl.insertBefore(el, boundariesSvg);
             }});
 
-            // 2. Tuile GEE — progressive
             const gUrl = tileUrl(geeTemplate, zoom, wx, y);
             loadTile(gUrl).then(img => {{
                 if (myToken !== renderToken) return;
@@ -340,7 +316,6 @@ def build_sdg_maplibre_html(
                     el.style.left   = left+'px'; el.style.top = top+'px';
                     el.style.opacity= currentOpacity;
                     mapEl.insertBefore(el, boundariesSvg);
-                    // Masquer le skeleton dès la 1ère tuile GEE visible
                     hideSkeleton();
                     hideWarning();
                 }} else {{
@@ -351,20 +326,17 @@ def build_sdg_maplibre_html(
             }});
         }});
 
-        // Prefetch silencieux (marge 2) — uniquement GEE, alimente le cache
         prefetchCoords.forEach(({{wx, y}}) => {{
             const gUrl = tileUrl(geeTemplate, zoom, wx, y);
-            if (!cacheGet(gUrl)) loadTile(gUrl);   // fire-and-forget
+            if (!cacheGet(gUrl)) loadTile(gUrl);
         }});
     }}
 
-    // ── Opacity ──────────────────────────────────────────────────────────
     function setOpacity(v) {{
         currentOpacity = Math.max(0, Math.min(1, v));
         document.querySelectorAll('.'+GEE_CLASS).forEach(t => {{ t.style.opacity=currentOpacity; }});
     }}
 
-    // ── Zoom (préserve la position géographique) ─────────────────────────
     function zoomTo(nz) {{
         if (nz===zoom) return;
         const geo = worldToLonLat(center.x, center.y, zoom);
@@ -373,7 +345,6 @@ def build_sdg_maplibre_html(
         render();
     }}
 
-    // ── Contrôles ────────────────────────────────────────────────────────
     document.getElementById('zoom-in').onclick  = () => zoomTo(Math.min(zoom+1, 12));
     document.getElementById('zoom-out').onclick = () => zoomTo(Math.max(zoom-1, 2));
 
